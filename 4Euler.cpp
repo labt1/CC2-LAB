@@ -19,14 +19,22 @@ bool palindromo(int n){
 }
 
 int mayorpalin(){
-    int mayor=0;
-    for(int i=100;i<102;i++){
-        for(int j=100;j<102;j++){
-           mayor=i*j;
-           cout<<i<<"x"<<j<<"="<<mayor<<endl;
+    int res=0,mayor=0;
+
+    for(int i=100;i<999;i++){
+        for(int j=100;j<999;j++){
+                res=i*j;
+                cout<<i<<"x"<<j<<" = "<<res<<endl;
+                mayor=res;
+            if(palindromo(res))
+                if(res>mayor)
+                    mayor=res;
         }
     }
-return 0;
+return res;
 }
+ int main(){
+ cout<<mayorpalin();
+ return 0;
 
-
+ }
