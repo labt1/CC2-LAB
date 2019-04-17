@@ -2,17 +2,17 @@
 
 using namespace std;
 
-int diferencia(int a){
-    int sumCua=0,cuaSum=0;
+int resta(int a){
+    int sum2=0,sum1=0;
     for(int i = 1 ; i<=a;i++){
-        sumCua +=(i*i);
+        sum2 +=(i*i);
     }
     for(int i=1;i<=a;i++){
-        cuaSum +=i;
+        sum1 +=i;
     }
-    return (cuaSum*cuaSum)-sumCua;
+    return (sum1*sum1)-sum2;
 }
 int main(){
-    cout << diferencia(100);
+    cout << resta(100);
     return 0;
 }
