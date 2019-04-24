@@ -129,3 +129,21 @@ double Triangle::area() const {
 
     return std::sqrt( s * (s-a) * (s-b) * (s-c) );
  }
+
+
+const string vowels = " aeiou ";
+
+string pigLatinify(const string s){
+    if(s.size()==0){return s;}//cadena vacia oopaaa!!
+    if (s.find("qu")==0){//iniciamos con "qu"
+        return s.substr(2, s.size()-2) + "-" + s.substr(0,2) + "ay";
+    }
+    else if(vowels.find(s[0]) != string::npos){return s + "way";}
+    else {return s.substr(1,s.size()-1) + "-" + s[0] + "ay";}
+
+}
+
+int main(){
+    cout<<pigLatinify("hola que tal");
+
+}
